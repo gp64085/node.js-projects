@@ -1,0 +1,26 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "packageManager": "pnpm",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "drizzle-kit": "^0.31.7",
+    "drizzle-orm": "^0.44.7",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3"
+  }
+}
