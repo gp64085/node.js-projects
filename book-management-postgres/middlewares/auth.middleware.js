@@ -37,8 +37,8 @@ export const authenticationMiddleware = async (req, res, next) => {
   try {
     const user = jwt.verify(token, process.env.JWT_SECRET_KEY);
 
-    if (!user) {
-      next();
+    if (!user || user.exp < Date.now() / 1000) {
+      return next();
     }
 
     req.user = user;

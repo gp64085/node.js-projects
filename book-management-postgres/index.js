@@ -6,6 +6,7 @@ import bookRouter from "./routes/books.routes.js";
 import userRouter from "./routes/user.routes.js";
 import { loggingMiddleware } from "./middlewares/logger.js";
 import adminRouter from "./routes/admin.routes.js";
+import { authenticationMiddleware } from "./middlewares/auth.middleware.js";
 
 const PORT = 4000;
 
@@ -15,6 +16,7 @@ const app = express();
 // Middlewares
 app.use(json());
 app.use(loggingMiddleware);
+app.use(authenticationMiddleware);
 
 // Router
 app.use("/books", bookRouter);
