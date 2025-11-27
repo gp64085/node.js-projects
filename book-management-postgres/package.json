@@ -1,15 +1,14 @@
 {
   "name": "express-app",
   "version": "1.0.0",
-  "packageManager": "pnpm",
+  "packageManager": "pnpm@10.4.1",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
     "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "db:studio": "drizzle-kit studio"
   },
   "keywords": [],
   "author": "",
